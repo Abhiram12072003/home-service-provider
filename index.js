@@ -47,7 +47,10 @@ if (NODE_ENV === 'production') {
 
 //database connection
 try {
-  if (DB_STRING === "mongodb+srv://Abhiram:abhiram@cluster0.zvh4rep.mongodb.net/?retryWrites=true&w=majority") {
+  if (
+    DB_STRING ===
+    'mongodb+srv://Abhiram:abhiram@cluster0.zvh4rep.mongodb.net/?retryWrites=true&w=majority'
+  ) {
     mongoose.connect(DB_STRING, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
