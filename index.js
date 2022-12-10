@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 const mongoose = require('mongoose');
-require('dotenv').config();
+require('dotenv').config({ path: '.env.dev' });
 const morgan = require('morgan');
 const cors = require('cors');
 const college = require('./router/college');
@@ -47,7 +47,7 @@ if (NODE_ENV === 'production') {
 
 //database connection
 try {
-  if (DB_STRING !== '<YOUR_DB_STRING>') {
+  if (DB_STRING === "mongodb+srv://Abhiram:abhiram@cluster0.zvh4rep.mongodb.net/?retryWrites=true&w=majority") {
     mongoose.connect(DB_STRING, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
